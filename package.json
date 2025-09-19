@@ -15,6 +15,7 @@
     "build": "scripts/make.html.js",
     "postbuild": "dprint fmt"
   },
+  "packageManager": "pnpm@10.17.0",
   "dependencies": {
     "@verikami/remark-deflist-revisited": "^0.5.22",
     "dedent": "^1.7.0",
