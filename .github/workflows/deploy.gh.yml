@@ -5,13 +5,16 @@ on:
   push:
     tags:
       - "v*"
+  # push:
+  #   branches: ["new"]
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write
+      pages: write
+      id-token: write
     steps:
       # Krok 1: Pobranie kodu źródłowego
       - name: "Checkout repository"
@@ -38,13 +41,27 @@ jobs:
       - name: "Build project"
         run: pnpm build
 
+      - name: "Upload artifact"
+        uses: actions/upload-pages-artifact@v3
+
       # Krok 6: Deploy @ GitHub Pages
-      - name: "Deploy to GitHub Pages"
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          # Używamy wbudowanego, bezpiecznego tokena zamiast personalnego
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Katalog, który ma być opublikowany
-          publish_dir: ./dist
-          # Wiadomość commita
-          commit_message: "Deploy (+):"
+      # - name: "Deploy to GitHub Pages"
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     # Używamy wbudowanego, bezpiecznego tokena zamiast personalnego
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     # Katalog, który ma być opublikowany
+      #     publish_dir: ./dist
+      #     # Wiadomość commita
+      #     commit_message: "Deploy (+):"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
