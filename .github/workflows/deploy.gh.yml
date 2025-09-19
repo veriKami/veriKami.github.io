@@ -8,6 +8,11 @@ on:
   # push:
   #   branches: ["new"]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   #: ----------------------------------------
   # deploy:
@@ -32,10 +37,6 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     steps:
       # Krok 1: Pobranie kodu źródłowego
       - name: "Checkout repository"
