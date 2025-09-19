@@ -1,0 +1,50 @@
+name: "Deploy GH Pages"
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      # Krok 1: Pobranie kodu źródłowego
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+
+      # Krok 2: Instalacja pnpm
+      - name: "Setup pnpm"
+        uses: pnpm/action-setup@v4
+
+      # Krok 3: Konfiguracja Node.js i cache dla pnpm
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      # Krok 4: Instalacja wszystkich zależności
+      # Używamy `pnpm install` zamiast `--prod`, aby mieć pewność,
+      # że narzędzia deweloperskie potrzebne do budowy są dostępne.
+      - name: "Install dependencies"
+        run: pnpm install --frozen-lockfile
+
+      # Krok 5: Budowanie projektu
+      - name: "Build project"
+        run: pnpm build
+
+      # Krok 6: Deploy @ GitHub Pages
+      - name: "Deploy to GitHub Pages"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # Używamy wbudowanego, bezpiecznego tokena zamiast personalnego
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Katalog, który ma być opublikowany
+          publish_dir: ./dist
+          # Wiadomość commita
+          commit_message: "Deploy (+):"

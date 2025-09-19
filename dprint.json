@@ -1,0 +1,12 @@
+{
+  "includes": ["dist/*"],
+  "excludes": ["!dist", "scripts/**", "**/node_modules"],
+  "markup": {
+    "printWidth": 99,
+    "scriptIndent": true,
+    "styleIndent": true
+  },
+  "plugins": [
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.23.4.wasm"
+  ]
+}

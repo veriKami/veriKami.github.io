@@ -1,0 +1,28 @@
+{
+  "name": "verikami.github.io",
+  "version": "0.0.0",
+  "author": "veriKami <verikami@gmail.com> (https://verikami.com/)",
+  "description": "veriKami °// Weronika Kami",
+  "homepage": "https://github.com/veriKami/veriKami.github.io#readme",
+  "repository": "veriKami/veriKami.github.io",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "degit": "degit veriKami/veriKami tmp --force",
+    "postdegit": "mv tmp/README.md src/index.md && rm -rf tmp",
+    "prebuild": "pnpm degit",
+    "build": "scripts/make.html.js",
+    "postbuild": "dprint fmt"
+  },
+  "dependencies": {
+    "@verikami/remark-deflist-revisited": "^0.5.22",
+    "dedent": "^1.7.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
+  },
+  "devDependencies": {
+    "degit": "^2.8.4",
+    "dprint": "^0.50.2"
+  }
+}
