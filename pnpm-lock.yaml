@@ -14,9 +14,6 @@ importers:
       dedent:
         specifier: ^1.7.0
         version: 1.7.0
-      dprint:
-        specifier: ^0.50.2
-        version: 0.50.2
       remark:
         specifier: ^15.0.1
         version: 15.0.1
@@ -27,6 +24,9 @@ importers:
       degit:
         specifier: ^2.8.4
         version: 2.8.4
+      dprint:
+        specifier: ^0.50.2
+        version: 0.50.2
 
 packages:
 
