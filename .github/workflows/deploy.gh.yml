@@ -2,9 +2,9 @@ name: "Deploy GH Pages"
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - "v*"
+  # push:
+  #   tags:
+  #     - "v*"
   # push:
   #   branches: ["new"]
 
@@ -14,72 +14,26 @@ permissions:
   id-token: write
 
 jobs:
-  #: ----------------------------------------
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v4
-  #     - name: Setup Pages
-  #       uses: actions/configure-pages@v5
-  #     - name: Upload artifact
-  #       uses: actions/upload-pages-artifact@v3
-  #       with:
-  #         # Upload entire repository
-  #         path: '.'
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
-  #: ----------------------------------------
-
   build:
     runs-on: ubuntu-latest
     steps:
-      # Krok 1: Pobranie kodu źródłowego
       - name: "Checkout repository"
         uses: actions/checkout@v4
-
-      # Krok 2: Instalacja pnpm
       - name: "Setup pnpm"
         uses: pnpm/action-setup@v4
-
-      # Krok 3: Konfiguracja Node.js i cache dla pnpm
       - name: "Setup Node.js"
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
-
-      # Krok 4: Instalacja wszystkich zależności
-      # Używamy `pnpm install` zamiast `--prod`, aby mieć pewność,
-      # że narzędzia deweloperskie potrzebne do budowy są dostępne.
+          cache: "pnpm"
       - name: "Install dependencies"
         run: pnpm install --frozen-lockfile
-
-      # Krok 5: Budowanie projektu
       - name: "Build project"
         run: pnpm build
-
       - name: "Upload artifact"
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository or path
-          # path: '.'
-          path: 'dist'
-
-      # Krok 6: Deploy @ GitHub Pages
-      # - name: "Deploy to GitHub Pages"
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     # Używamy wbudowanego, bezpiecznego tokena zamiast personalnego
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     # Katalog, który ma być opublikowany
-      #     publish_dir: ./dist
-      #     # Wiadomość commita
-      #     commit_message: "Deploy (+):"
+          path: "dist"
 
   deploy:
     environment:
