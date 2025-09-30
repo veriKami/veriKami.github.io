@@ -54,6 +54,12 @@ const makeHtml = ($ = {}) => {
     navigate li code { padding: .3rem .5rem; background: #f5f5f5; border:1px solid #ddd; }
     /* *********************************** */
     </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TQT133E82"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date()); gtag("config", "G-3TQT133E82");
+    </script>
     </head>
     <body>
     ${$?.htmlHeader || ""}
