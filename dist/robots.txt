@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /
-Allow: /remark-deflist-revisited/
+### Disallow: /
+### Allow: /remark-deflist-revisited/
+Allow: /
