@@ -250,7 +250,7 @@ MIT © [veriKami](https://verikami.com) °// Weronika Kami
 [CI Badge]: https://github.com/veriKami/remark-deflist-revisited/actions/workflows/publish.yml/badge.svg
 
 [NPM]: https://www.npmjs.com/package/@verikami/remark-deflist-revisited
-[NPM Badge]: https://img.shields.io/npm/v/@verikami/remark-deflist-revisited?logo=npm&logoColor=white&labelColor=blue&color=black
+[NPM Badge]: https://img.shields.io/npm/v/@verikami/remark-deflist-revisited?logo=npm&logoColor=white&labelColor=red&color=black
 
 [JSR]: https://jsr.io/@verikami/remark-deflist-revisited
 [JSR Badge]: https://jsr.io/badges/@verikami/remark-deflist-revisited
