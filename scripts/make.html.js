@@ -48,17 +48,10 @@ const makeHtml = ($ = {}) => {
     a:hover { text-decoration: underline; }
     h1 a, h1 a:hover { text-decoration: none; }
     /* *********************************** */
-    __ul { padding: 2rem; border: 0px solid #ddd; }
     navigate li { margin-left: 2rem; padding: .5rem; color: red; }
     navigate li p,
     navigate li code { color: black; }
     navigate li code { padding: .3rem .5rem; background: #f5f5f5; border:1px solid #ddd; }
-    __hr { height: 1px; border-width: 0; background-color: #ccc; }
-    __a,
-    __a:visited { color: blue; text-decoration: none; }
-    __a:hover { color: blue; text-decoration: underline; }
-    __h1 a,
-    __h1 a:hover { text-decoration: none; }
     /* *********************************** */
     </style>
     </head>
