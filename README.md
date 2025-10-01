@@ -1,7 +1,7 @@
 # veriKami °// Weronika Kami
 
 My latest "pro bono" work – (npm/jsr) module for parsing nested definision lists.  
-Developed on the margins of a certain markdown-related project
+Developed on the margins of a certain markdown-related project.
 
 ## @verikami/remark-deflist-revisited
 
@@ -13,13 +13,13 @@ Developed on the margins of a certain markdown-related project
 
 **[Remark]** plugin. A wrapper around `remark-deflist` with improved support for nested definition lists.
 It preserves all the original functionality and performs additional processing.
-Bun, Deno and Cloudflare Workers compatibility. Also works in Astro and web browser.
+**[Bun]**, **[Deno]** and **[Cloudflare Workers]** compatibility. Also works in **[Astro]** and web browser.
 
-<hr style="height:1px;margin:20px 0 0;">
+<hr style="height:1px;margin:15px 0 15px;">
 <details style="margin:0;padding:0;">
 <summary style="margin:0 0 30px;padding:0;">
 Implementation Details
-<hr style="height:1px;margin:15px 0 0;">
+<hr style="height:1px;margin:15px 0 15px;">
 </summary>
 
 ### Installation
@@ -235,36 +235,10 @@ Original work — MIT © Alex Shaw
 * [gh: Symbitic/remark-plugins](https://github.com/Symbitic/remark-plugins)
 * [npm: remark-deflist](https://www.npmjs.com/package/remark-deflist)
 
-MIT © [veriKami](https://verikami.com) °// Weronika Kami
+2025 © MIT °// veriKami °// Weronika Kami
 
 <hr style="height:1px;margin:30px 0;">
 </details>
-
-[GH]: https://github.com/veriKami/remark-deflist-revisited
-[GH Badge]: https://img.shields.io/badge/GitHub-Repository-blue?logo=github
-
-[CC]: https://codecov.io/github/veriKami/remark-deflist-revisited
-[CC Badge]: https://codecov.io/github/veriKami/remark-deflist-revisited/graph/badge.svg?token=0EWE7CIAVI
-
-[CI]: https://github.com/veriKami/remark-deflist-revisited/actions/workflows/publish.yml
-[CI Badge]: https://github.com/veriKami/remark-deflist-revisited/actions/workflows/publish.yml/badge.svg
-
-[NPM]: https://www.npmjs.com/package/@verikami/remark-deflist-revisited
-[NPM Badge]: https://img.shields.io/npm/v/@verikami/remark-deflist-revisited?logo=npm&logoColor=white&labelColor=blue&color=black
-
-[JSR]: https://jsr.io/@verikami/remark-deflist-revisited
-[JSR Badge]: https://jsr.io/badges/@verikami/remark-deflist-revisited
-
-[Remark]: https://github.com/remarkjs/remark
-[remark-deflist]: https://www.npmjs.com/package/remark-deflist
-[Bun]: https://bun.sh
-[Deno]: https://deno.com
-[Cloudflare Workers]: https://workers.cloudflare.com
-[Astro]: https://astro.build
-
-[page]: https://verikami.github.io/remark-deflist-revisited
-[inline]: https://verikami.github.io/remark-deflist-revisited/script.esm.sh.html
-[generated]: https://verikami.github.io/remark-deflist-revisited/generated
 
 ```
         (▒)(▒)_______███☼███____(▒)(▒)
@@ -304,4 +278,33 @@ MIT © [veriKami](https://verikami.com) °// Weronika Kami
         ______________██__█▄
 ```
 
-2025 © veriKami
+2025 © °// [veriKami] °// [Weronika Kami]
+
+[veriKami]: https://verikami.com
+[Weronika Kami]: https://linkedin.com/in/verikami
+
+[page]: https://verikami.github.io/remark-deflist-revisited
+[inline]: https://verikami.github.io/remark-deflist-revisited/script.esm.sh.html
+[generated]: https://verikami.github.io/remark-deflist-revisited/generated
+
+[Remark]: https://github.com/remarkjs/remark
+[remark-deflist]: https://www.npmjs.com/package/remark-deflist
+[Bun]: https://bun.sh
+[Deno]: https://deno.com
+[Cloudflare Workers]: https://workers.cloudflare.com
+[Astro]: https://astro.build
+
+[GH Badge]: https://img.shields.io/badge/GitHub-Repository-blue?logo=github
+[GH]: https://github.com/veriKami/remark-deflist-revisited
+
+[CC Badge]: https://codecov.io/github/veriKami/remark-deflist-revisited/graph/badge.svg?token=0EWE7CIAVI
+[CC]: https://codecov.io/github/veriKami/remark-deflist-revisited
+
+[CI Badge]: https://github.com/veriKami/remark-deflist-revisited/actions/workflows/publish.yml/badge.svg
+[CI]: https://github.com/veriKami/remark-deflist-revisited/actions/workflows/publish.yml
+
+[NPM Badge]: https://img.shields.io/npm/v/@verikami/remark-deflist-revisited?logo=npm&logoColor=white&labelColor=red&color=black
+[NPM]: https://www.npmjs.com/package/@verikami/remark-deflist-revisited
+
+[JSR Badge]: https://jsr.io/badges/@verikami/remark-deflist-revisited
+[JSR]: https://jsr.io/@verikami/remark-deflist-revisited
