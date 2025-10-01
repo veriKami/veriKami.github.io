@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "veriKami <verikami@gmail.com> (https://verikami.com/)",
   "description": "veriKami °// Weronika Kami",
-  "homepage": "https://github.com/veriKami/veriKami.github.io#readme",
+  "homepage": "https://verikami.github.io",
   "repository": "veriKami/veriKami.github.io",
   "license": "MIT",
   "type": "module",
@@ -15,7 +15,7 @@
     "build": "scripts/make.html.js",
     "postbuild": "dprint fmt"
   },
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.17.1",
   "dependencies": {
     "@verikami/remark-deflist-revisited": "^0.6.3",
     "dedent": "^1.7.0",
