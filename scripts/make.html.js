@@ -28,13 +28,17 @@ const makeHtml = ($ = {}) => {
     <head>
     <meta charset="UTF-8">
     <title>veriKami °// Weronika Kami °// Chasing Technoscience</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="remark, remark-plugin, remark-deflist, markdown, markdown-plugin,
-      definition-list, nested-lists, deflist, unist, astro, parser, wrapper, veriKami, Weronika Kami">
+    <meta name="description" content="Versatile IT professional with 20+ years of experience in
+      web systems design and Cloud infrastructure. Combines deep technical expertise with a strong
+      visual and conceptual design background. Passionate about solving complex problems through
+      interdisciplinary approaches and innovative thinking.">
+    <meta name="keywords" content="remark, remark-plugin, remark-html, markdown, markdown-plugin,
+      deflist, unist, astro, cloudflare, parser, wrapper, veriKami, Weronika Kami">
     <meta name="author" content="veriKami °// Weronika Kami">
     <meta name="pubdate" content="2025/09/30">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="qGe3Iz5C890mQVRy9dgEO5r5uALAa1kY_w-0GtLsAd8">
+    <link rel="canonical" href="https://verikami.github.io" hreflang="en">
     <style>
       body { font-family: sans-serif; font-size: 1rem; padding: .2rem 3rem 1rem; background: #fff; }
       hr { margin: 0 0 1rem; height: 1px; border-width: 0; background-color: #ccc; }

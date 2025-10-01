@@ -203,11 +203,11 @@ export default {
 
 ### Processing Flow
 
-[![GH][GH Badge]][GH]
 [![CC][CC Badge]][CC]
 [![CI][CI Badge]][CI]
 [![NPM][NPM Badge]][NPM]
 [![JSR][JSR Badge]][JSR]
+[![Socket][Socket Badge]][Socket]
 
 ```
 Markdown
@@ -308,3 +308,10 @@ Original work — MIT © Alex Shaw
 
 [JSR Badge]: https://jsr.io/badges/@verikami/remark-deflist-revisited
 [JSR]: https://jsr.io/@verikami/remark-deflist-revisited
+
+[Downloads Badge]: https://img.shields.io/npm/dm/@verikami/remark-deflist-revisited.svg
+[Downloads]: https://www.npmjs.com/package/@verikami/remark-deflist-revisited
+
+[Socket Badge]: https://badge.socket.dev/npm/package/@verikami/remark-deflist-revisited
+[Socket]: https://socket.dev/npm/package/@verikami/remark-deflist-revisited
+
