@@ -13,7 +13,10 @@
     "postdegit": "mv tmp/README.md src/index.md && rm -rf tmp",
     "prebuild": "pnpm degit",
     "build": "scripts/make.html.js",
-    "postbuild": "dprint fmt"
+    "postbuild": "dprint fmt",
+    "d:c": "dprint output-resolved-config",
+    "d:f": "dprint output-file-paths",
+    "d:u": "dprint config update"
   },
   "packageManager": "pnpm@10.17.1",
   "dependencies": {
