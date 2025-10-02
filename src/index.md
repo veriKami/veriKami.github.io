@@ -10,34 +10,18 @@ Developed on the margins of a certain markdown-related project.
 [![CI][CI Badge]][CI]
 [![NPM][NPM Badge]][NPM]
 [![JSR][JSR Badge]][JSR]
+[![Socket][Socket Badge]][Socket]
 
 **[Remark]** plugin. A wrapper around `remark-deflist` with improved support for nested definition lists.
 It preserves all the original functionality and performs additional processing.
 **[Bun]**, **[Deno]** and **[Cloudflare Workers]** compatibility. Also works in **[Astro]** and web browser.
 
 <hr style="height:1px;margin:15px 0 15px;">
-
-<details><summary>Implementation Details</summary><hr>
-
-### Installation
-
-```bash
-ツ pnpm add @verikami/remark-deflist-revisited
-ツ npm i @verikami/remark-deflist-revisited
-```
-
-Cloudflare Worker demo
-
-```bash
-ツ npx @verikami/remark-deflist-revisited@latest
-ツ npx @verikami/remark-deflist-revisited --help
-```
-
-### Description
+<details><summary><strong>Project Description</strong></summary><hr>
 
 **The problem** with `remark-deflist` is that the plugin renders nested list items inside `<dd>` incorrectly.
 
-**Markdown**
+### Markdown
 
 ```markdown
 Term
@@ -76,7 +60,26 @@ With `@verikami/remark-deflist-revisited`
 </dl>
 ```
 
-### Usage in Node.js
+<hr></details>
+<details><summary><strong>Installation and Usage</strong></summary><hr>
+
+### Installation
+
+```bash
+ツ pnpm add @verikami/remark-deflist-revisited
+ツ npm i @verikami/remark-deflist-revisited
+```
+
+Cloudflare Worker demo
+
+```bash
+ツ npx @verikami/remark-deflist-revisited@latest
+ツ npx @verikami/remark-deflist-revisited --help
+```
+
+### Usage
+
+<details><summary>Usage in Node.js</summary>
 
 ```js
 import { remark } from "remark";
@@ -99,7 +102,8 @@ console.log(String(output));
 
 ```
 
-### Usage in Deno
+</details>
+<details><summary>Usage in Deno</summary>
 
 ```js
 import { remark } from "npm:remark@^15";
@@ -110,7 +114,8 @@ import deflist from "npm:@verikami/remark-deflist-revisited";
 
 ```
 
-### Usage in Astro
+</details>
+<details><summary>Usage in Astro</summary>
 
 ```js
 import remarkDeflist from "@verikami/remark-deflist-revisited";
@@ -125,7 +130,8 @@ export default defineConfig({
 
 ```
 
-### Usage in Cloudflare Worker
+  </details>
+  <details><summary>Usage in Cloudflare Worker</summary>
 
 ```js
 import { remark } from "remark";
@@ -156,7 +162,8 @@ export default {
 
 ```
 
-### Usage in html
+</details>
+<details><summary>Usage in html</summary>
 
 ```html
 <html>
@@ -198,32 +205,7 @@ export default {
 
 ```
 
-### Processing Flow
-
-[![CC][CC Badge]][CC]
-[![CI][CI Badge]][CI]
-[![NPM][NPM Badge]][NPM]
-[![JSR][JSR Badge]][JSR]
-[![Socket][Socket Badge]][Socket]
-
-```
-Markdown
-   │
-Plugin (wrapped remark-deflist)
-   │
-AST // HTML
-   │
-Snapshots (vitest)
-   │
-Build (npm) ./dist + (jsr) ./lib
-   │
-CI/CD (GitHub Actions)
-   │
-┌──────────┬─────────┬─────────┐
-│ GitHub   │   NPM   │   JSR   │
-│ Packages │         │         │
-└──────────┴─────────┴─────────┘
-```
+</details>
 
 ### License
 
@@ -235,7 +217,7 @@ Original work — MIT © Alex Shaw
 2025 © MIT °// veriKami °// Weronika Kami
 
 <hr></details>
-<details><summary>Examples and Templates</summary><hr>
+<details><summary><strong>Examples and Templates</strong></summary><hr>
 
 Example implementations for `@verikami/remark-deflist-revisited`.  
 They are also published as standalone repositories (templates):
@@ -282,7 +264,7 @@ npx @verikami/remark-deflist-revisited --help
 2025 © MIT °// veriKami °// Weronika Kami
 
 </details>
-<hr>
+<hr style="height:1px;margin:15px 0 15px;">
 
 ```
         (▒)(▒)_______███☼███____(▒)(▒)

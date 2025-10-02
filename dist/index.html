@@ -83,6 +83,10 @@
           src="https://jsr.io/badges/@verikami/remark-deflist-revisited"
           alt="JSR"
         ></a>
+      <a href="https://socket.dev/npm/package/@verikami/remark-deflist-revisited"><img
+          src="https://badge.socket.dev/npm/package/@verikami/remark-deflist-revisited"
+          alt="Socket"
+        ></a>
     </p>
     <p>
       <strong><a href="https://github.com/remarkjs/remark">Remark</a></strong> plugin. A wrapper
@@ -96,22 +100,13 @@
     </p>
     <hr style="height:1px;margin:15px 0 15px;">
     <details>
-      <summary>Implementation Details</summary>
+      <summary><strong>Project Description</strong></summary>
       <hr>
-      <h3>Installation</h3>
-      <pre><code class="language-bash">ツ pnpm add @verikami/remark-deflist-revisited
-ツ npm i @verikami/remark-deflist-revisited
-</code></pre>
-      <p>Cloudflare Worker demo</p>
-      <pre><code class="language-bash">ツ npx @verikami/remark-deflist-revisited@latest
-ツ npx @verikami/remark-deflist-revisited --help
-</code></pre>
-      <h3>Description</h3>
       <p>
         <strong>The problem</strong> with <code>remark-deflist</code> is that the plugin renders
         nested list items inside <code>&#x3C;dd></code> incorrectly.
       </p>
-      <p><strong>Markdown</strong></p>
+      <h3>Markdown</h3>
       <pre><code class="language-markdown">Term
 : - item A
   - item B
@@ -141,8 +136,23 @@
   &#x3C;/ul>
 &#x3C;/dl>
 </code></pre>
-      <h3>Usage in Node.js</h3>
-      <pre><code class="language-js">import { remark } from "remark";
+      <hr>
+    </details>
+    <details>
+      <summary><strong>Installation and Usage</strong></summary>
+      <hr>
+      <h3>Installation</h3>
+      <pre><code class="language-bash">ツ pnpm add @verikami/remark-deflist-revisited
+ツ npm i @verikami/remark-deflist-revisited
+</code></pre>
+      <p>Cloudflare Worker demo</p>
+      <pre><code class="language-bash">ツ npx @verikami/remark-deflist-revisited@latest
+ツ npx @verikami/remark-deflist-revisited --help
+</code></pre>
+      <h3>Usage</h3>
+      <details>
+        <summary>Usage in Node.js</summary>
+        <pre><code class="language-js">import { remark } from "remark";
 import html from "remark-html";
 import deflist from "@verikami/remark-deflist-revisited";
 
@@ -161,16 +171,20 @@ const output = await remark()
 console.log(String(output));
 
 </code></pre>
-      <h3>Usage in Deno</h3>
-      <pre><code class="language-js">import { remark } from "npm:remark@^15";
+      </details>
+      <details>
+        <summary>Usage in Deno</summary>
+        <pre><code class="language-js">import { remark } from "npm:remark@^15";
 import html from "npm:remark-html@^16";
 import deflist from "npm:@verikami/remark-deflist-revisited";
 
 // (...) same code as above
 
 </code></pre>
-      <h3>Usage in Astro</h3>
-      <pre><code class="language-js">import remarkDeflist from "@verikami/remark-deflist-revisited";
+      </details>
+      <details>
+        <summary>Usage in Astro</summary>
+        <pre><code class="language-js">import remarkDeflist from "@verikami/remark-deflist-revisited";
 
 export default defineConfig({
   markdown: {
@@ -181,8 +195,10 @@ export default defineConfig({
 });
 
 </code></pre>
-      <h3>Usage in Cloudflare Worker</h3>
-      <pre><code class="language-js">import { remark } from "remark";
+      </details>
+      <details>
+        <summary>Usage in Cloudflare Worker</summary>
+        <pre><code class="language-js">import { remark } from "remark";
 import html from "remark-html";
 import dedent from "dedent";
 import deflist from "@verikami/remark-deflist-revisited";
@@ -209,8 +225,10 @@ export default {
 };
 
 </code></pre>
-      <h3>Usage in html</h3>
-      <pre><code class="language-html">&#x3C;html>
+      </details>
+      <details>
+        <summary>Usage in html</summary>
+        <pre><code class="language-html">&#x3C;html>
   &#x3C;head>
     &#x3C;script type="module">
       import { remark } from "https://esm.sh/remark@15";
@@ -248,48 +266,7 @@ export default {
 &#x3C;/html>
 
 </code></pre>
-      <h3>Processing Flow</h3>
-      <p>
-        <a href="https://codecov.io/github/veriKami/remark-deflist-revisited"><img
-            src="https://codecov.io/github/veriKami/remark-deflist-revisited/graph/badge.svg?token=0EWE7CIAVI"
-            alt="CC"
-          ></a>
-        <a
-          href="https://github.com/veriKami/remark-deflist-revisited/actions/workflows/publish.yml"
-        ><img
-            src="https://github.com/veriKami/remark-deflist-revisited/actions/workflows/publish.yml/badge.svg"
-            alt="CI"
-          ></a>
-        <a href="https://www.npmjs.com/package/@verikami/remark-deflist-revisited"><img
-            src="https://img.shields.io/npm/v/@verikami/remark-deflist-revisited?logo=npm&#x26;logoColor=white&#x26;labelColor=red&#x26;color=black"
-            alt="NPM"
-          ></a>
-        <a href="https://jsr.io/@verikami/remark-deflist-revisited"><img
-            src="https://jsr.io/badges/@verikami/remark-deflist-revisited"
-            alt="JSR"
-          ></a>
-        <a href="https://socket.dev/npm/package/@verikami/remark-deflist-revisited"><img
-            src="https://badge.socket.dev/npm/package/@verikami/remark-deflist-revisited"
-            alt="Socket"
-          ></a>
-      </p>
-      <pre><code>Markdown
-   │
-Plugin (wrapped remark-deflist)
-   │
-AST // HTML
-   │
-Snapshots (vitest)
-   │
-Build (npm) ./dist + (jsr) ./lib
-   │
-CI/CD (GitHub Actions)
-   │
-┌──────────┬─────────┬─────────┐
-│ GitHub   │   NPM   │   JSR   │
-│ Packages │         │         │
-└──────────┴─────────┴─────────┘
-</code></pre>
+      </details>
       <h3>License</h3>
       <p>Original work — MIT © Alex Shaw</p>
       <ul>
@@ -302,7 +279,7 @@ CI/CD (GitHub Actions)
       <hr>
     </details>
     <details>
-      <summary>Examples and Templates</summary>
+      <summary><strong>Examples and Templates</strong></summary>
       <hr>
       <p>
         Example implementations for <code>@verikami/remark-deflist-revisited</code>.<br>
@@ -397,7 +374,7 @@ CI/CD (GitHub Actions)
       <h3>License</h3>
       <p>2025 © MIT °// veriKami °// Weronika Kami</p>
     </details>
-    <hr>
+    <hr style="height:1px;margin:15px 0 15px;">
     <pre><code>        (▒)(▒)_______███☼███____(▒)(▒)
         (▒)(█)(▒)__ ███_☼██████
         _(▒)(▒)___██____████████
