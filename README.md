@@ -99,7 +99,6 @@ const output = await remark()
   .process(markdown);
 
 console.log(String(output));
-
 ```
 
 </details>
@@ -111,7 +110,6 @@ import html from "npm:remark-html@^16";
 import deflist from "npm:@verikami/remark-deflist-revisited";
 
 // (...) same code as above
-
 ```
 
 </details>
@@ -127,11 +125,10 @@ export default defineConfig({
     ]
   }
 });
-
 ```
 
-  </details>
-  <details><summary>Usage in Cloudflare Worker</summary>
+</details>
+<details><summary>Usage in Cloudflare Worker</summary>
 
 ```js
 import { remark } from "remark";
@@ -159,7 +156,6 @@ export default {
     });
   }
 };
-
 ```
 
 </details>
@@ -202,7 +198,6 @@ export default {
     <div id="markdown"></div>
   </body>
 </html>
-
 ```
 
 </details>
@@ -234,7 +229,6 @@ You can play with these examples via **[StackBlitz]** web IDE:
 | Simple Example        | Express Example       | Worker Example        | Astro Example         |
 |:----------------------|:----------------------|:----------------------|:----------------------|
 |[![SB][SB Badge]][SB_s]|[![SB][SB Badge]][SB_e]|[![SB][SB Badge]][SB_w]|[![SB][SB Badge]][SB_a]|
-
 
 ### Interactive Installation
 
