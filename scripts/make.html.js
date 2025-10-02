@@ -27,7 +27,7 @@ const makeHtml = ($ = {}) => {
     <html lang="en">
     <head>
     <meta charset="UTF-8">
-    <title>veriKami °// Weronika Kami °// Chasing Technoscience</title>
+    <title>Weronika Kami (: veriKami :) Chasing Technoscience</title>
     <meta name="description" content="Versatile IT professional with 20+ years of experience in
       web systems design and Cloud infrastructure. Combines deep technical expertise with a strong
       visual and conceptual design background. Passionate about solving complex problems through
