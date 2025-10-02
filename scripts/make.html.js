@@ -4,12 +4,13 @@
 //: --------------------------------------------------------
 import fs from "node:fs";
 import path from "node:path";
-import { execSync } from "node:child_process";
+// import { execSync } from "node:child_process";
 import dedent from "dedent";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
+import remarkGfm from "remark-gfm";
 //: --------------------------------------------------------
-import deflist from "@verikami/remark-deflist-revisited";
+// import deflist from "@verikami/remark-deflist-revisited";
 
 //: SETUP
 //: -----------------------------------------
@@ -47,12 +48,12 @@ const makeHtml = ($ = {}) => {
       dt { font-weight: bold; margin-bottom: .5rem; }
       dd { margin: 0 1rem .5rem; color: gray; }
       dd ul, dd ol { margin-left: 0; color: darkblue; }
-      ul, ol { margin-left: 2rem; color: red; }
+      ul, ol { margin-left: 1rem; color: black; }
       ul li ul, ol li ol { margin-left: 0; }
       table { border-collapse: collapse; background: #fff; }
       tr:nth-child(2) td:first-child { color: #aaa; font-weight: normal; }
       tr:nth-child(2) a { color: darkTurquoise; }
-      td { padding: .3rem .5rem; border: 1px solid #ddd; }
+      th, td { padding: .3rem .5rem; border: 1px solid #ddd; }
       td:first-child { text-align: right; font-weight: bold; }
       a, a:visited { color: blue; text-decoration: none; }
       a:hover { text-decoration: underline; }
@@ -62,8 +63,8 @@ const makeHtml = ($ = {}) => {
       navigate li code { color: black; }
       navigate li code { padding: .3rem .5rem; background: #f5f5f5; border:1px solid #ddd; }
       hr { height: 1px; margin: 15px 0 15px; }
-      details { margin: 0; padding: 0; }
-      summary { margin: 0 0 30px; padding: 0; }
+      details { margin: 10px 0; padding: 0; }
+      summary { margin: 0; padding: 0; cursor: pointer; }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TQT133E82"></script>
     <script>
@@ -87,31 +88,31 @@ const makeHtml = ($ = {}) => {
     </html>`;
 };
 
-const htmlHeader = `
-  <h1>
-    <a href="https://github.com/veriKami/remark-deflist-revisited" target="_blank">🔘</a>
-    veriKami/remark-deflist-revisited
-  </h1>
-  <hr>
-  <navigate>
-  <ul>
-  <li>
-    <p>
-      html generated from markdown @
-      <a href="../generated/revisited.list.basic.html">generated/revisited.list.basic.html</a>
-    </p>
-    <p>source markdown test files @ tests/fixtures</p>
-    <p>to regenerate run <code>ツ pnpm demo</code></p>
-  </li>
-  <li>
-    <p>
-      test inline script from https://esm.sh @
-      <a href="../script.esm.sh.html">script.esm.sh.html</a>
-    </p>
-  </li>
-  </ul>
-  </navigate>
-`;
+// const htmlHeader = `
+//   <h1>
+//     <a href="https://github.com/veriKami/remark-deflist-revisited" target="_blank">🔘</a>
+//     veriKami/remark-deflist-revisited
+//   </h1>
+//   <hr>
+//   <navigate>
+//   <ul>
+//   <li>
+//     <p>
+//       html generated from markdown @
+//       <a href="../generated/revisited.list.basic.html">generated/revisited.list.basic.html</a>
+//     </p>
+//     <p>source markdown test files @ tests/fixtures</p>
+//     <p>to regenerate run <code>ツ pnpm demo</code></p>
+//   </li>
+//   <li>
+//     <p>
+//       test inline script from https://esm.sh @
+//       <a href="../script.esm.sh.html">script.esm.sh.html</a>
+//     </p>
+//   </li>
+//   </ul>
+//   </navigate>
+// `;
 
 //: MENU
 //: --------------------------------------------------------
@@ -137,8 +138,9 @@ const makeFiles = (mode) => {
       const input = fs.readFileSync(path.join(sourceDir, file), "utf8");
 
       const html = remark()
-        .use(deflist)
+        // .use(deflist)
         .use(remarkHtml, { sanitize: false })
+        .use(remarkGfm)
         .processSync(input)
         .toString()
         // .replace("@verikami/remark-deflist-revisited", "<hr>");

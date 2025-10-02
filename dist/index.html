@@ -28,12 +28,12 @@
       dt { font-weight: bold; margin-bottom: .5rem; }
       dd { margin: 0 1rem .5rem; color: gray; }
       dd ul, dd ol { margin-left: 0; color: darkblue; }
-      ul, ol { margin-left: 2rem; color: red; }
+      ul, ol { margin-left: 1rem; color: black; }
       ul li ul, ol li ol { margin-left: 0; }
       table { border-collapse: collapse; background: #fff; }
       tr:nth-child(2) td:first-child { color: #aaa; font-weight: normal; }
       tr:nth-child(2) a { color: darkTurquoise; }
-      td { padding: .3rem .5rem; border: 1px solid #ddd; }
+      th, td { padding: .3rem .5rem; border: 1px solid #ddd; }
       td:first-child { text-align: right; font-weight: bold; }
       a, a:visited { color: blue; text-decoration: none; }
       a:hover { text-decoration: underline; }
@@ -43,8 +43,8 @@
       navigate li code { color: black; }
       navigate li code { padding: .3rem .5rem; background: #f5f5f5; border:1px solid #ddd; }
       hr { height: 1px; margin: 15px 0 15px; }
-      details { margin: 0; padding: 0; }
-      summary { margin: 0 0 30px; padding: 0; }
+      details { margin: 10px 0; padding: 0; }
+      summary { margin: 0; padding: 0; cursor: pointer; }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TQT133E82"></script>
     <script>
@@ -95,11 +95,9 @@
         >Astro</a></strong> and web browser.
     </p>
     <hr style="height:1px;margin:15px 0 15px;">
-    <details style="margin:0;padding:0;">
-      <summary style="margin:0 0 30px;padding:0;">
-        Implementation Details
-        <hr style="height:1px;margin:15px 0 15px;">
-      </summary>
+    <details>
+      <summary>Implementation Details</summary>
+      <hr>
       <h3>Installation</h3>
       <pre><code class="language-bash">ツ pnpm add @verikami/remark-deflist-revisited
 ツ npm i @verikami/remark-deflist-revisited
@@ -301,8 +299,105 @@ CI/CD (GitHub Actions)
         <li><a href="https://www.npmjs.com/package/remark-deflist">npm: remark-deflist</a></li>
       </ul>
       <p>2025 © MIT °// veriKami °// Weronika Kami</p>
-      <hr style="height:1px;margin:30px 0;">
+      <hr>
     </details>
+    <details>
+      <summary>Examples and Templates</summary>
+      <hr>
+      <p>
+        Example implementations for <code>@verikami/remark-deflist-revisited</code>.<br>
+        They are also published as standalone repositories (templates):
+      </p>
+      <ul>
+        <li>
+          <strong>Simple</strong> → <a
+            href="https://github.com/veriKami/remark-deflist-revisited-simple"
+          >veriKami/remark-deflist-revisited-simple</a>
+        </li>
+        <li>
+          <strong>Express.js</strong> → <a
+            href="https://github.com/veriKami/remark-deflist-revisited-express"
+          >veriKami/remark-deflist-revisited-express</a>
+        </li>
+        <li>
+          <strong>Cloudflare Worker</strong> → <a
+            href="https://github.com/veriKami/remark-deflist-revisited-worker"
+          >veriKami/remark-deflist-revisited-worker</a>
+        </li>
+        <li>
+          <strong>Astro</strong> → <a
+            href="https://github.com/veriKami/remark-deflist-revisited-astro"
+          >veriKami/remark-deflist-revisited-astro</a>
+        </li>
+      </ul>
+      <h3>Live Examples</h3>
+      <p>
+        You can play with these examples via <strong><a href="https://stackblitz.com"
+          >StackBlitz</a></strong> web IDE:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th align="left">Simple Example</th>
+            <th align="left">Express Example</th>
+            <th align="left">Worker Example</th>
+            <th align="left">Astro Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="left">
+              <a
+                href="https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/simple?startScript=start"
+              ><img
+                  src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"
+                  alt="SB"
+                ></a>
+            </td>
+            <td align="left">
+              <a
+                href="https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/express?startScript=start"
+              ><img
+                  src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"
+                  alt="SB"
+                ></a>
+            </td>
+            <td align="left">
+              <a
+                href="https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/worker?startScript=dev"
+              ><img
+                  src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"
+                  alt="SB"
+                ></a>
+            </td>
+            <td align="left">
+              <a
+                href="https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/astro?startScript=dev"
+              ><img
+                  src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"
+                  alt="SB"
+                ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Interactive Installation</h3>
+      <h4>npm + pnpm + yarn</h4>
+      <pre><code class="language-bash">npm create remark-deflist-revisited@latest
+</code></pre>
+      <pre><code class="language-bash">pnpm create remark-deflist-revisited
+</code></pre>
+      <pre><code class="language-bash">yarn create remark-deflist-revisited
+</code></pre>
+      <h3>Cloudflare Worker demo (via module itself)</h3>
+      <pre><code class="language-bash">npx @verikami/remark-deflist-revisited@latest
+</code></pre>
+      <pre><code class="language-bash">npx @verikami/remark-deflist-revisited --help
+</code></pre>
+      <h3>License</h3>
+      <p>2025 © MIT °// veriKami °// Weronika Kami</p>
+    </details>
+    <hr>
     <pre><code>        (▒)(▒)_______███☼███____(▒)(▒)
         (▒)(█)(▒)__ ███_☼██████
         _(▒)(▒)___██____████████

@@ -16,11 +16,8 @@ It preserves all the original functionality and performs additional processing.
 **[Bun]**, **[Deno]** and **[Cloudflare Workers]** compatibility. Also works in **[Astro]** and web browser.
 
 <hr style="height:1px;margin:15px 0 15px;">
-<details style="margin:0;padding:0;">
-<summary style="margin:0 0 30px;padding:0;">
-Implementation Details
-<hr style="height:1px;margin:15px 0 15px;">
-</summary>
+
+<details><summary>Implementation Details</summary><hr>
 
 ### Installation
 
@@ -237,8 +234,55 @@ Original work — MIT © Alex Shaw
 
 2025 © MIT °// veriKami °// Weronika Kami
 
-<hr style="height:1px;margin:30px 0;">
+<hr></details>
+<details><summary>Examples and Templates</summary><hr>
+
+Example implementations for `@verikami/remark-deflist-revisited`.  
+They are also published as standalone repositories (templates):
+
+- **Simple** → [veriKami/remark-deflist-revisited-simple][+:simple]
+- **Express.js** → [veriKami/remark-deflist-revisited-express][+:express]
+- **Cloudflare Worker** → [veriKami/remark-deflist-revisited-worker][+:worker]
+- **Astro** → [veriKami/remark-deflist-revisited-astro][+:astro]
+
+### Live Examples
+
+You can play with these examples via **[StackBlitz]** web IDE:
+
+| Simple Example        | Express Example       | Worker Example        | Astro Example         |
+|:----------------------|:----------------------|:----------------------|:----------------------|
+|[![SB][SB Badge]][SB_s]|[![SB][SB Badge]][SB_e]|[![SB][SB Badge]][SB_w]|[![SB][SB Badge]][SB_a]|
+
+
+### Interactive Installation
+
+#### npm + pnpm + yarn
+
+```bash
+npm create remark-deflist-revisited@latest
+```
+```bash
+pnpm create remark-deflist-revisited
+```
+```bash
+yarn create remark-deflist-revisited
+```
+
+### Cloudflare Worker demo (via module itself)
+
+```bash
+npx @verikami/remark-deflist-revisited@latest
+```
+```bash
+npx @verikami/remark-deflist-revisited --help
+```
+
+### License
+
+2025 © MIT °// veriKami °// Weronika Kami
+
 </details>
+<hr>
 
 ```
         (▒)(▒)_______███☼███____(▒)(▒)
@@ -293,6 +337,12 @@ Original work — MIT © Alex Shaw
 [Deno]: https://deno.com
 [Cloudflare Workers]: https://workers.cloudflare.com
 [Astro]: https://astro.build
+[StackBlitz]: https://stackblitz.com
+
+[+:simple]: https://github.com/veriKami/remark-deflist-revisited-simple
+[+:express]: https://github.com/veriKami/remark-deflist-revisited-express
+[+:worker]: https://github.com/veriKami/remark-deflist-revisited-worker
+[+:astro]: https://github.com/veriKami/remark-deflist-revisited-astro
 
 [GH Badge]: https://img.shields.io/badge/GitHub-Repository-blue?logo=github
 [GH]: https://github.com/veriKami/remark-deflist-revisited
@@ -315,3 +365,8 @@ Original work — MIT © Alex Shaw
 [Socket Badge]: https://badge.socket.dev/npm/package/@verikami/remark-deflist-revisited
 [Socket]: https://socket.dev/npm/package/@verikami/remark-deflist-revisited
 
+[SB Badge]: https://developer.stackblitz.com/img/open_in_stackblitz_small.svg
+[SB_s]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/simple?startScript=start
+[SB_e]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/express?startScript=start
+[SB_w]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/worker?startScript=dev
+[SB_a]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/astro?startScript=dev
