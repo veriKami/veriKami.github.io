@@ -212,7 +212,7 @@ Original work — MIT © Alex Shaw
 2025 © MIT °// veriKami °// Weronika Kami
 
 <hr></details>
-<details name="d3" open><summary><strong>Examples and Templates</strong></summary><hr>
+<details name="d3"><summary><strong>Examples and Templates</strong></summary><hr>
 
 Example implementations for `@verikami/remark-deflist-revisited`.  
 They are also published as standalone repositories (templates):

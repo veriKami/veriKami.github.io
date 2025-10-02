@@ -85,6 +85,10 @@ const makeHtml = ($ = {}) => {
     -->
     ${$?.html}
     </body>
+    <script>
+    const detailsElement = document.querySelector('details[name="d3"]');
+    if (detailsElement) detailsElement.open = false;
+    </script>
     </html>`;
 };
 

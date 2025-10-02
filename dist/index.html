@@ -273,7 +273,7 @@ export default {
       <p>2025 © MIT °// veriKami °// Weronika Kami</p>
       <hr>
     </details>
-    <details name="d3" open>
+    <details name="d3">
       <summary><strong>Examples and Templates</strong></summary>
       <hr>
       <p>
@@ -412,4 +412,8 @@ export default {
       >Weronika Kami</a>
     </p>
   </body>
+  <script>
+    const detailsElement = document.querySelector('details[name="d3"]');
+if (detailsElement) detailsElement.open = false;
+  </script>
 </html>
