@@ -17,7 +17,7 @@ It preserves all the original functionality and performs additional processing.
 **[Bun]**, **[Deno]** and **[Cloudflare Workers]** compatibility. Also works in **[Astro]** and web browser.
 
 <hr style="height:1px;margin:15px 0 15px;">
-<details><summary><strong>Project Description</strong></summary><hr>
+<details name="d1"><summary><strong>Project Description</strong></summary><hr>
 
 **The problem** with `remark-deflist` is that the plugin renders nested list items inside `<dd>` incorrectly.
 
@@ -61,7 +61,7 @@ With `@verikami/remark-deflist-revisited`
 ```
 
 <hr></details>
-<details><summary><strong>Installation and Usage</strong></summary><hr>
+<details name="d2"><summary><strong>Installation and Usage</strong></summary><hr>
 
 ### Installation
 
@@ -212,7 +212,7 @@ Original work — MIT © Alex Shaw
 2025 © MIT °// veriKami °// Weronika Kami
 
 <hr></details>
-<details><summary><strong>Examples and Templates</strong></summary><hr>
+<details name="d3" open><summary><strong>Examples and Templates</strong></summary><hr>
 
 Example implementations for `@verikami/remark-deflist-revisited`.  
 They are also published as standalone repositories (templates):

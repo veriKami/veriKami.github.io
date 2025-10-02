@@ -17,7 +17,7 @@ It preserves all the original functionality and performs additional processing.
 **[Bun]**, **[Deno]** and **[Cloudflare Workers]** compatibility. Also works in **[Astro]** and web browser.
 
 <hr style="height:1px;margin:15px 0 15px;">
-<details><summary><strong>Project Description</strong></summary><hr>
+<details name="d1"><summary><strong>Project Description</strong></summary><hr>
 
 **The problem** with `remark-deflist` is that the plugin renders nested list items inside `<dd>` incorrectly.
 
@@ -61,7 +61,7 @@ With `@verikami/remark-deflist-revisited`
 ```
 
 <hr></details>
-<details><summary><strong>Installation and Usage</strong></summary><hr>
+<details name="d2"><summary><strong>Installation and Usage</strong></summary><hr>
 
 ### Installation
 
@@ -99,7 +99,6 @@ const output = await remark()
   .process(markdown);
 
 console.log(String(output));
-
 ```
 
 </details>
@@ -111,7 +110,6 @@ import html from "npm:remark-html@^16";
 import deflist from "npm:@verikami/remark-deflist-revisited";
 
 // (...) same code as above
-
 ```
 
 </details>
@@ -127,11 +125,10 @@ export default defineConfig({
     ]
   }
 });
-
 ```
 
-  </details>
-  <details><summary>Usage in Cloudflare Worker</summary>
+</details>
+<details><summary>Usage in Cloudflare Worker</summary>
 
 ```js
 import { remark } from "remark";
@@ -159,7 +156,6 @@ export default {
     });
   }
 };
-
 ```
 
 </details>
@@ -202,7 +198,6 @@ export default {
     <div id="markdown"></div>
   </body>
 </html>
-
 ```
 
 </details>
@@ -217,7 +212,7 @@ Original work — MIT © Alex Shaw
 2025 © MIT °// veriKami °// Weronika Kami
 
 <hr></details>
-<details><summary><strong>Examples and Templates</strong></summary><hr>
+<details name="d3" open><summary><strong>Examples and Templates</strong></summary><hr>
 
 Example implementations for `@verikami/remark-deflist-revisited`.  
 They are also published as standalone repositories (templates):
@@ -234,7 +229,6 @@ You can play with these examples via **[StackBlitz]** web IDE:
 | Simple Example        | Express Example       | Worker Example        | Astro Example         |
 |:----------------------|:----------------------|:----------------------|:----------------------|
 |[![SB][SB Badge]][SB_s]|[![SB][SB Badge]][SB_e]|[![SB][SB Badge]][SB_w]|[![SB][SB Badge]][SB_a]|
-
 
 ### Interactive Installation
 
