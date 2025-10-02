@@ -10,37 +10,18 @@ Developed on the margins of a certain markdown-related project.
 [![CI][CI Badge]][CI]
 [![NPM][NPM Badge]][NPM]
 [![JSR][JSR Badge]][JSR]
+[![Socket][Socket Badge]][Socket]
 
 **[Remark]** plugin. A wrapper around `remark-deflist` with improved support for nested definition lists.
 It preserves all the original functionality and performs additional processing.
 **[Bun]**, **[Deno]** and **[Cloudflare Workers]** compatibility. Also works in **[Astro]** and web browser.
 
 <hr style="height:1px;margin:15px 0 15px;">
-<details style="margin:0;padding:0;">
-<summary style="margin:0 0 30px;padding:0;">
-Implementation Details
-<hr style="height:1px;margin:15px 0 15px;">
-</summary>
-
-### Installation
-
-```bash
-ツ pnpm add @verikami/remark-deflist-revisited
-ツ npm i @verikami/remark-deflist-revisited
-```
-
-Cloudflare Worker demo
-
-```bash
-ツ npx @verikami/remark-deflist-revisited@latest
-ツ npx @verikami/remark-deflist-revisited --help
-```
-
-### Description
+<details><summary><strong>Project Description</strong></summary><hr>
 
 **The problem** with `remark-deflist` is that the plugin renders nested list items inside `<dd>` incorrectly.
 
-**Markdown**
+### Markdown
 
 ```markdown
 Term
@@ -79,7 +60,26 @@ With `@verikami/remark-deflist-revisited`
 </dl>
 ```
 
-### Usage in Node.js
+<hr></details>
+<details><summary><strong>Installation and Usage</strong></summary><hr>
+
+### Installation
+
+```bash
+ツ pnpm add @verikami/remark-deflist-revisited
+ツ npm i @verikami/remark-deflist-revisited
+```
+
+Cloudflare Worker demo
+
+```bash
+ツ npx @verikami/remark-deflist-revisited@latest
+ツ npx @verikami/remark-deflist-revisited --help
+```
+
+### Usage
+
+<details><summary>Usage in Node.js</summary>
 
 ```js
 import { remark } from "remark";
@@ -102,7 +102,8 @@ console.log(String(output));
 
 ```
 
-### Usage in Deno
+</details>
+<details><summary>Usage in Deno</summary>
 
 ```js
 import { remark } from "npm:remark@^15";
@@ -113,7 +114,8 @@ import deflist from "npm:@verikami/remark-deflist-revisited";
 
 ```
 
-### Usage in Astro
+</details>
+<details><summary>Usage in Astro</summary>
 
 ```js
 import remarkDeflist from "@verikami/remark-deflist-revisited";
@@ -128,7 +130,8 @@ export default defineConfig({
 
 ```
 
-### Usage in Cloudflare Worker
+  </details>
+  <details><summary>Usage in Cloudflare Worker</summary>
 
 ```js
 import { remark } from "remark";
@@ -159,7 +162,8 @@ export default {
 
 ```
 
-### Usage in html
+</details>
+<details><summary>Usage in html</summary>
 
 ```html
 <html>
@@ -201,32 +205,7 @@ export default {
 
 ```
 
-### Processing Flow
-
-[![CC][CC Badge]][CC]
-[![CI][CI Badge]][CI]
-[![NPM][NPM Badge]][NPM]
-[![JSR][JSR Badge]][JSR]
-[![Socket][Socket Badge]][Socket]
-
-```
-Markdown
-   │
-Plugin (wrapped remark-deflist)
-   │
-AST // HTML
-   │
-Snapshots (vitest)
-   │
-Build (npm) ./dist + (jsr) ./lib
-   │
-CI/CD (GitHub Actions)
-   │
-┌──────────┬─────────┬─────────┐
-│ GitHub   │   NPM   │   JSR   │
-│ Packages │         │         │
-└──────────┴─────────┴─────────┘
-```
+</details>
 
 ### License
 
@@ -237,8 +216,55 @@ Original work — MIT © Alex Shaw
 
 2025 © MIT °// veriKami °// Weronika Kami
 
-<hr style="height:1px;margin:30px 0;">
+<hr></details>
+<details><summary><strong>Examples and Templates</strong></summary><hr>
+
+Example implementations for `@verikami/remark-deflist-revisited`.  
+They are also published as standalone repositories (templates):
+
+- **Simple** → [veriKami/remark-deflist-revisited-simple][+:simple]
+- **Express.js** → [veriKami/remark-deflist-revisited-express][+:express]
+- **Cloudflare Worker** → [veriKami/remark-deflist-revisited-worker][+:worker]
+- **Astro** → [veriKami/remark-deflist-revisited-astro][+:astro]
+
+### Live Examples
+
+You can play with these examples via **[StackBlitz]** web IDE:
+
+| Simple Example        | Express Example       | Worker Example        | Astro Example         |
+|:----------------------|:----------------------|:----------------------|:----------------------|
+|[![SB][SB Badge]][SB_s]|[![SB][SB Badge]][SB_e]|[![SB][SB Badge]][SB_w]|[![SB][SB Badge]][SB_a]|
+
+
+### Interactive Installation
+
+#### npm + pnpm + yarn
+
+```bash
+npm create remark-deflist-revisited@latest
+```
+```bash
+pnpm create remark-deflist-revisited
+```
+```bash
+yarn create remark-deflist-revisited
+```
+
+### Cloudflare Worker demo (via module itself)
+
+```bash
+npx @verikami/remark-deflist-revisited@latest
+```
+```bash
+npx @verikami/remark-deflist-revisited --help
+```
+
+### License
+
+2025 © MIT °// veriKami °// Weronika Kami
+
 </details>
+<hr style="height:1px;margin:15px 0 15px;">
 
 ```
         (▒)(▒)_______███☼███____(▒)(▒)
@@ -293,6 +319,12 @@ Original work — MIT © Alex Shaw
 [Deno]: https://deno.com
 [Cloudflare Workers]: https://workers.cloudflare.com
 [Astro]: https://astro.build
+[StackBlitz]: https://stackblitz.com
+
+[+:simple]: https://github.com/veriKami/remark-deflist-revisited-simple
+[+:express]: https://github.com/veriKami/remark-deflist-revisited-express
+[+:worker]: https://github.com/veriKami/remark-deflist-revisited-worker
+[+:astro]: https://github.com/veriKami/remark-deflist-revisited-astro
 
 [GH Badge]: https://img.shields.io/badge/GitHub-Repository-blue?logo=github
 [GH]: https://github.com/veriKami/remark-deflist-revisited
@@ -315,3 +347,8 @@ Original work — MIT © Alex Shaw
 [Socket Badge]: https://badge.socket.dev/npm/package/@verikami/remark-deflist-revisited
 [Socket]: https://socket.dev/npm/package/@verikami/remark-deflist-revisited
 
+[SB Badge]: https://developer.stackblitz.com/img/open_in_stackblitz_small.svg
+[SB_s]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/simple?startScript=start
+[SB_e]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/express?startScript=start
+[SB_w]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/worker?startScript=dev
+[SB_a]: https://stackblitz.com/github/veriKami/remark-deflist-revisited/tree/main/samples/astro?startScript=dev
