@@ -10,7 +10,7 @@ import { remark } from "remark";
 import remarkHtml from "remark-html";
 import remarkGfm from "remark-gfm";
 //: --------------------------------------------------------
-// import deflist from "@verikami/remark-deflist-revisited";
+import deflist from "@verikami/remark-deflist-revisited";
 
 //: SETUP
 //: -----------------------------------------
@@ -87,7 +87,7 @@ const makeHtml = ($ = {}) => {
     </body>
     <script>
     const detailsElement = document.querySelector('details[name="d3"]');
-    if (detailsElement) detailsElement.open = false;
+    if (detailsElement) detailsElement.open = true;
     </script>
     </html>`;
 };
@@ -143,8 +143,8 @@ const makeFiles = (mode) => {
 
       const html = remark()
         // .use(deflist)
-        .use(remarkHtml, { sanitize: false })
         .use(remarkGfm)
+        .use(remarkHtml, { sanitize: false })
         .processSync(input)
         .toString()
         // .replace("@verikami/remark-deflist-revisited", "<hr>");
