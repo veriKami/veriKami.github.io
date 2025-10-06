@@ -40,6 +40,9 @@ const makeHtml = ($ = {}) => {
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="qGe3Iz5C890mQVRy9dgEO5r5uALAa1kY_w-0GtLsAd8">
     <link rel="canonical" href="https://verikami.github.io" hreflang="en">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="alternate icon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
     <style>
       body { font-family: sans-serif; font-size: 1rem; padding: .2rem 3rem 1rem; background: #fff; }
       hr { margin: 0 0 1rem; height: 1px; border-width: 0; background-color: #ccc; }
