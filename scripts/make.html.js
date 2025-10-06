@@ -43,6 +43,23 @@ const makeHtml = ($ = {}) => {
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <link rel="alternate icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Weronika Kami (: veriKami :) Chasing Technoscience">
+    <meta property="og:title" content="Weronika Kami (: veriKami :) Chasing Technoscience">
+    <meta property="og:description" content="Versatile IT professional with 20+ years of experience in
+      web systems design and Cloud infrastructure. Combines deep technical expertise with a strong
+      visual and conceptual design background. Passionate about solving complex problems through
+      interdisciplinary approaches and innovative thinking.">
+    <meta property="og:url" content="https://verikami.github.io">
+    <meta property="og:image" content="https://verikami.github.io/veriKami.jpg">
+    <meta property="og:image:alt" content="veriKami °// Weronika Kami">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weronika Kami (: veriKami :) Chasing Technoscience">
+    <meta name="twitter:description" content="Versatile IT professional with 20+ years of experience in
+          web systems design and Cloud infrastructure. Combines deep technical expertise with a strong
+          visual and conceptual design background. Passionate about solving complex problems through
+          interdisciplinary approaches and innovative thinking.">
+    <meta name="twitter:image" content="https://verikami.github.io/veriKami.jpg">
     <style>
       body { font-family: sans-serif; font-size: 1rem; padding: .2rem 3rem 1rem; background: #fff; }
       hr { margin: 0 0 1rem; height: 1px; border-width: 0; background-color: #ccc; }
