@@ -36,7 +36,7 @@ const makeHtml = ($ = {}) => {
     <meta name="keywords" content="remark, remark-plugin, remark-html, markdown, markdown-plugin,
       deflist, unist, astro, cloudflare, parser, wrapper, veriKami, Weronika Kami">
     <meta name="author" content="veriKami °// Weronika Kami">
-    <meta name="pubdate" content="2025/09/30">
+    <meta name="pubdate" content="2025/10/08">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="qGe3Iz5C890mQVRy9dgEO5r5uALAa1kY_w-0GtLsAd8">
     <link rel="canonical" href="https://verikami.github.io" hreflang="en">
@@ -107,7 +107,7 @@ const makeHtml = ($ = {}) => {
     </body>
     <script>
     const detailsElement = document.querySelector('details[name="d3"]');
-    if (detailsElement) detailsElement.open = true;
+    if (detailsElement) detailsElement.open = false;
     </script>
     </html>`;
 };
