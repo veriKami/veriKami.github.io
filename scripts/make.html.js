@@ -41,8 +41,9 @@ const makeHtml = ($ = {}) => {
     <meta name="google-site-verification" content="qGe3Iz5C890mQVRy9dgEO5r5uALAa1kY_w-0GtLsAd8">
     <link rel="canonical" href="https://verikami.github.io" hreflang="en">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/png" href="favicon.png">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Weronika Kami (: veriKami :) Chasing Technoscience">
     <meta property="og:title" content="Weronika Kami (: veriKami :) Chasing Technoscience">
